@@ -1,0 +1,176 @@
+html {
+  font-family: "Kanit", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  /* background-color: black; */
+  overflow: hidden;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  height: 192px;
+  margin-top: 30rem;
+}
+
+.thumbnail-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  position: relative;
+  transition: 250ms;
+  display: inline-block;
+  padding: 0 2px;
+}
+
+#player-container {
+  position: absolute;
+  visibility: hidden;
+  height: 100%;
+}
+
+.item-controls {
+  color: white;
+  z-index: 1;
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-direction: row;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.item:hover {
+  margin: 0 120px;
+  transform: scale(1.7);
+}
+
+/* .item:hover .item-controls {
+  visibility: visible;
+} */
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-weight: 300;
+}
+
+.stats > * {
+  margin-bottom: 4px;
+}
+
+.stats > img {
+  height: 32px;
+  width: 32px;
+}
+
+.stats span {
+  color: white;
+}
+
+.stats > span:nth-child(2) {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.stats-info {
+  flex-direction: row;
+}
+
+.stats-info * {
+  display: inline-block;
+}
+
+.rating-box {
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  padding: 0px 4px;
+}
+
+.rating-box > span {
+  display: inline-block;
+  margin: 0px;
+}
+
+.extra-button {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.extra-button > div {
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.extra-button > div > img {
+  height: 10px;
+  width: 10px;
+}
+
+.wrapper a {
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  font-size: 5rem;
+  background: #000;
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.wrapper a:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    -90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.wrapper a:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
